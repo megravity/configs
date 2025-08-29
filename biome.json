@@ -1,0 +1,63 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on",
+				"useSortedAttributes": "on",
+				"useSortedKeys": "on"
+			}
+		},
+		"enabled": true
+	},
+	"files": {
+		"ignoreUnknown": false,
+		"includes": ["**", "!cloudflare-env.d.ts", "!package.json"]
+	},
+	"formatter": {
+		"enabled": true,
+		"formatWithErrors": true,
+		"includes": ["!cloudflare-env.d.ts", "!package.json"],
+		"indentStyle": "tab"
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double"
+		}
+	},
+	"json": {
+		"formatter": {
+			"trailingCommas": "all"
+		},
+		"parser": {
+			"allowTrailingCommas": true
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"includes": ["!cloudflare-env.d.ts", "!package.json"],
+		"rules": {
+			"recommended": true,
+			"style": {
+				"noCommonJs": "on",
+				"noMagicNumbers": "on",
+				"noNegationElse": "on",
+				"noUselessElse": "on",
+				"useDefaultParameterLast": "on",
+				"useForOf": "on",
+				"useNumericSeparators": "on",
+				"useSelfClosingElements": "on"
+			},
+			"suspicious": {
+				"noUnassignedVariables": "on",
+				"noVar": "on"
+			}
+		}
+	},
+	"vcs": {
+		"clientKind": "git",
+		"defaultBranch": "main",
+		"enabled": true,
+		"useIgnoreFile": true
+	}
+}
